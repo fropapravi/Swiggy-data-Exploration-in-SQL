@@ -1,6 +1,10 @@
-use swiggy;
-select * from swiggy;
--- select distinct city, rating,row_number() over (order by rating desc) as popularfrom swiggywhere rating > 4.2
+/*
+swiggy data Exploration
+
+Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
+
+*/
+
 -- find the top one resturant in banglore
 select distinct restaurant_name,city, rating,
 rank() over (order by rating desc) as 'rank'
