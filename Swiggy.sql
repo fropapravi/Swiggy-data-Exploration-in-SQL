@@ -1,15 +1,12 @@
 /*
 swiggy data Exploration
-
-Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
-
+Basic level
 */
 
 --import data to Mysql -- explained in Readme file
 
 
-
--- 1. find the top one resturant in banglore
+# find the top one resturant in banglore
 
 select distinct restaurant_name,city, rating,
 rank() over (order by rating desc) as 'rank'
